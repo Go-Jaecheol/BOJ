@@ -61,6 +61,9 @@ def putVirus(count):
 ```
 - **바이러스를 놓기 위한 함수**  
   * lab의 값이 ***2***인 경우에 **virus** 리스트에 **append**  
+  ```Python
+  from itertools import combinations
+  ```
   * **combinations**를 이용해서 조합 후  
   * **spreadVirus() 함수**를 호출  
 
