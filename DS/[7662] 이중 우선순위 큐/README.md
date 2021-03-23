@@ -12,8 +12,8 @@ if operation == 'I':
   heapq.heappush(max_q, (-num, i))
 ```
 - **연산이 I 일 경우**    
-  * min_q와 max_q 둘 다 heappush  
-  * exist[i] 값을 True로 변경  
+  * `min_q`와 `max_q` 둘 다 **heappush**  
+  * `exist[i]` 값을 ***True***로 변경  
 ---
 ```Python
 else:
@@ -31,10 +31,10 @@ else:
       heapq.heappop(max_q)
 ```
 - **연산이 D 일 경우**  
-  * 삭제할 값이 min_q, max_q 둘다에 존재하는지 exist값을 통해 확인하고  
-  * 존재 안하면 존재할 때까지 heappop  
-  * 그 다음 삭제할 값의 exist 값을 False로 바꿔주고 heappop  
-  * 이 과정은 num이 -1이면 min_q를, num이 1이면 max_q를 대상으로 진행  
+  * 삭제할 값이 `min_q`, `max_q` 둘다에 존재하는지 `exist`값을 통해 확인하고  
+  * 존재 안하면 존재할 때까지 **heappop**  
+  * 그 다음 삭제할 값의 `exist` 값을 ***False***로 바꿔주고 **heappop**  
+  * 이 과정은 `num`이 ***-1***이면 `min_q`를, `num`이 ***1***이면 `max_q`를 대상으로 진행  
 ---
 ```Python
 while min_q and not exist[min_q[0][1]]:
@@ -47,10 +47,10 @@ else:
   print(-max_q[0][0], min_q[0][0])
 ```
 - **출력하는 부분**  
-  * 혹시나 동기화가 안됐을 경우를 대비해서  
-  * 위에서 했던 첫번째 과정을 다시 실행하고  
-  * max_q에 값이 없으면 'EMPTY' 출력  
-  * 아니면 최댓값과 최솟값을 출력  
+  * 혹시나 **동기화**가 안됐을 경우를 대비해서  
+  * 위에서 했던 **첫번째 과정**을 다시 실행하고  
+  * `max_q`에 값이 없으면 ***'EMPTY'*** 출력  
+  * 아니면 **최댓값**과 **최솟값**을 출력  
 ---
 
 ## :memo: Review
